@@ -1,18 +1,9 @@
-This is a [Kobweb](https://github.com/varabyte/kobweb) project instantiated from the `examples/jb/my_counter` template.
+#### 【英単語学習アプリ】えいたんGo!
 
-It is based of the "Getting Started" tutorial provided by JetBrains
-[here](https://github.com/JetBrains/compose-jb/tree/master/tutorials/Web/Getting_Started).
-
-Even though Kobweb provides a extra functionality that you can use, this project doesn't use most of them (note the lack
-of dependencies in the project's `build.gradle.kts` file), and that's OK! Being a thin shim around Compose for Web is a
-perfectly acceptable use-case for this framework.
+- [アプリダウンロードページ](https://play.google.com/store/apps/details?id=jp.developer.bbee.englishmemory)
+- [アプリ紹介ページ](https://developerbbee.github.io/english_landing_page/)
+- [アプリ開発リポジトリ](https://github.com/developerBBee/EnglishMemory)
 
 ---
 
-To run the sample, simply enter the following command in the terminal:
-
-```bash
-kobweb run
-```
-
-and open [http://localhost:8080](http://localhost:8080) with your browser to see the result.
+アプリ公開日 2024/01/23
