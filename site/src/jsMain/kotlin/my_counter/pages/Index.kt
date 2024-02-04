@@ -21,6 +21,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.maxHeight
 import com.varabyte.kobweb.compose.ui.modifiers.maxWidth
+import com.varabyte.kobweb.compose.ui.modifiers.minHeight
 import com.varabyte.kobweb.compose.ui.modifiers.minWidth
 import com.varabyte.kobweb.compose.ui.modifiers.padding
 import com.varabyte.kobweb.compose.ui.modifiers.position
@@ -55,8 +56,7 @@ fun MainPage() {
         }
     } else {
         Box(
-            modifier = Modifier.height(100.vh),
-            contentAlignment = Alignment.BottomCenter,
+            modifier = Modifier.height(100.vh)
         ) {
             Column(
                 modifier = Modifier.fillMaxSize(),
@@ -65,7 +65,13 @@ fun MainPage() {
                 MobileHeader()
                 MobileBody()
             }
-            MobileFooter()
+            Column(
+                modifier = Modifier.fillMaxSize(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Bottom,
+            ) {
+                MobileFooter()
+            }
         }
     }
 }
@@ -181,6 +187,13 @@ fun IntroductionCard(
 
 @Composable
 fun Footer() {
+    SpanText(
+        modifier = Modifier
+            .fontSize(24.px)
+            .fontWeight(FontWeight.Bold),
+        text = Constants.DownloadNavigation
+    )
+    GooglePlayLogo(modifier = Modifier.width(320.px))
     SpanText(text = Constants.PlayLegalAttribution)
 }
 
@@ -188,11 +201,11 @@ fun Footer() {
 fun MobileHeader() {
     Box {
         Image(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.minHeight(480.px).fillMaxSize(),
             src = Res.Image.MobileBanner,
         )
         Box(
-            modifier = Modifier.fillMaxSize(),
+            modifier = Modifier.minHeight(480.px).fillMaxSize(),
             contentAlignment = Alignment.BottomEnd,
         ) {
             Box(
@@ -224,7 +237,7 @@ fun MobileIntroduction() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(16.px)
+            .padding(top = 16.px, leftRight = 16.px, bottom = 80.px)
     ) {
         MobileIntroductionCard(
             title = Constants.WordCardTitle,
@@ -288,10 +301,10 @@ fun MobileIntroductionCard(
 fun MobileFooter() {
     Row(
         modifier = Modifier
+            .height(64.px)
             .fillMaxWidth()
             .backgroundColor(Theme.Main.rgb)
-            .position(Position.Fixed)
-            .height(64.px),
+            .position(Position.Fixed),
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically,
     ) {
