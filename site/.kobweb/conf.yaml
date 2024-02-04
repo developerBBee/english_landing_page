@@ -1,13 +1,14 @@
 site:
-  title: "Counter"
+  title: "【英単語学習アプリ】えいたんGo!"
+  routePrefix: "english_landing_page"
 
 server:
   files:
     dev:
       contentRoot: "build/processedResources/js/main/public"
-      script: "build/dist/js/developmentExecutable/counter.js"
+      script: "build/dist/js/developmentExecutable/my_counter.js"
     prod:
-      script: "build/dist/js/productionExecutable/counter.js"
-      siteRoot: ".kobweb/site"
+      script: "build/dist/js/productionExecutable/my_counter.js"
+      siteRoot: "../docs"
 
   port: 8080

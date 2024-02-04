@@ -1,4 +1,4 @@
-This is a [Kobweb](https://github.com/varabyte/kobweb) project instantiated from the `examples/jb/counter` template.
+This is a [Kobweb](https://github.com/varabyte/kobweb) project instantiated from the `examples/jb/my_counter` template.
 
 It is based of the "Getting Started" tutorial provided by JetBrains
 [here](https://github.com/JetBrains/compose-jb/tree/master/tutorials/Web/Getting_Started).
